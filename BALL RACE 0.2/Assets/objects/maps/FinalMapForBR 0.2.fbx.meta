@@ -1,44 +1,39 @@
 fileFormatVersion: 2
 guid: 7e04b9f045ba14c21a16c4d2ea58fa5d
 ModelImporter:
-  serializedVersion: 25
+  serializedVersion: 26
   internalIDToNameTable: []
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Asphalt
-    second: {fileID: 5200634987612382211, guid: 7e04b9f045ba14c21a16c4d2ea58fa5d,
-      type: 3}
+    second: {fileID: 2100000, guid: e5066b52e547d4f879b81c7e327b2965, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Barier
-    second: {fileID: 5333680195425247694, guid: 7e04b9f045ba14c21a16c4d2ea58fa5d,
-      type: 3}
+    second: {fileID: 2100000, guid: 8a7838bc56e7f4508afc65abad5acbd3, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Black
-    second: {fileID: -1580535799172915004, guid: 7e04b9f045ba14c21a16c4d2ea58fa5d,
-      type: 3}
+    second: {fileID: 2100000, guid: f53e5a52d31cc4a9f8016cd25038ae58, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Bottom
-    second: {fileID: 441916079295038247, guid: 7e04b9f045ba14c21a16c4d2ea58fa5d, type: 3}
+    second: {fileID: 2100000, guid: 6bcd0fda57d724b43b34723764641a76, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Display
-    second: {fileID: -6605202284585042090, guid: 7e04b9f045ba14c21a16c4d2ea58fa5d,
-      type: 3}
+    second: {fileID: 2100000, guid: da831f7f0e0c14b0a810b274db2dd815, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Yellow
-    second: {fileID: -2653651044934150266, guid: 7e04b9f045ba14c21a16c4d2ea58fa5d,
-      type: 3}
+    second: {fileID: 2100000, guid: da6a509bde31b4c47a04aecbd412edd8, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -73,6 +68,7 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
