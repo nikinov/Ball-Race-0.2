@@ -25,12 +25,12 @@ public class GameManager : MonoBehaviour
         GamePanel.SetActive(true);
     }
 
-    public void completeLevel ()
+    public void completeLevel()
     {
         CompleteLevel.SetActive(true);
         GamePanel.SetActive(false);
     }
-    public void PauseLevel ()
+    public void PauseLevel()
     {
         pauseLevel.SetActive(true);
         GamePanel.SetActive(false);
@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;
     }
 
-    public void EndGame ()
+    public void EndGame()
     {
         if (GameHasEnded == false)
         {
@@ -53,21 +53,25 @@ public class GameManager : MonoBehaviour
             GamePanel.SetActive(false);
         }
     }
-    public void Restart ()
+    public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-    void Deth ()
+    void Deth()
     {
         DethPanel.SetActive(true);
     }
-    public void ToMap ()
+    public void ToMap()
     {
-        SceneManager.LoadScene(sceneBuildIndex: 0);
+        SceneManager.LoadScene(sceneBuildIndex: 2);
     }
-    public void ToStore ()
+    public void ToStore()
     {
         SceneManager.LoadScene(sceneBuildIndex: 1);
         Time.timeScale = 1f;
+    }
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene(sceneBuildIndex: 0);
     }
 }
