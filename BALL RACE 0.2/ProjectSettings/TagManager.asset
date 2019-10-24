@@ -11,9 +11,10 @@ TagManager:
   - FinishLine
   - PauseMenu
   - GamePanel
-  - BeachPinkSkin
   - BeachBlueSkin
   - BeachRedSkin
+  - BeachGreenSkin
+  - BeachPinkSkin
   layers:
   - Default
   - TransparentFX

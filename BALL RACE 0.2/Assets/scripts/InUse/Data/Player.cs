@@ -5,24 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    GameObject BeachPinkSkin;
+    GameObject BeachGreenSkin;
     GameObject BeachBlueSkin;
     GameObject BeachRedSkin;
 
-    Rigidbody PS;
-    Rigidbody BS;
-    Rigidbody RS;
+    //Rigidbody GS;
+    //Rigidbody BS;
+    //Rigidbody RS;
 
     public int BeachSkin;
 
     private void Awake()
     {
-        BeachPinkSkin = GameObject.FindGameObjectWithTag("BeachPinkSkin");
+        BeachGreenSkin = GameObject.FindGameObjectWithTag("BeachGreenSkin");
         BeachBlueSkin = GameObject.FindGameObjectWithTag("BeachBlueSkin");
         BeachRedSkin = GameObject.FindGameObjectWithTag("BeachRedSkin");
-        PS = BeachPinkSkin.GetComponent<Rigidbody>();
-        BS = BeachPinkSkin.GetComponent<Rigidbody>();
-        RS = BeachPinkSkin.GetComponent<Rigidbody>();
+        //GS = BeachGreenSkin.GetComponent<Rigidbody>();
+        //BS = BeachBlueSkin.GetComponent<Rigidbody>();
+        //RS = BeachRedSkin.GetComponent<Rigidbody>();
         LoadData();
     }
     public void ToPlay ()
@@ -31,32 +31,24 @@ public class Player : MonoBehaviour
     }
     private void Update()
     {
+        SaveData();
         if (BeachSkin == 0)
         {
-            BeachPinkSkin.SetActive(true);
-            SaveData();
-        }
-        else
-        {
-            BeachPinkSkin.SetActive(false);
+            BeachGreenSkin.SetActive(true);
+            BeachBlueSkin.SetActive(false);
+            BeachRedSkin.SetActive(false);
         }
         if (BeachSkin == 1)
         {
+            BeachGreenSkin.SetActive(false);
             BeachBlueSkin.SetActive(true);
-            SaveData();
-        }
-        else
-        {
-            BeachBlueSkin.SetActive(false);
+            BeachRedSkin.SetActive(false);
         }
         if (BeachSkin == 2)
         {
+            BeachGreenSkin.SetActive(false);
+            BeachBlueSkin.SetActive(false);
             BeachRedSkin.SetActive(true);
-            SaveData();
-        }
-        else
-        {
-            BeachRedSkin.SetActive(false);
         }
     }
     public void SaveData ()
@@ -69,7 +61,7 @@ public class Player : MonoBehaviour
 
         BeachSkin = data.Pink;
     }
-    public void Pink ()
+    public void Green ()
     {
         BeachSkin = 0;
     }
