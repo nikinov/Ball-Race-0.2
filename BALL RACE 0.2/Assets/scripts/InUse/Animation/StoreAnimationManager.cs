@@ -7,13 +7,23 @@ public class StoreAnimationManager : MonoBehaviour
     [SerializeField] private Animator storeAnime;
 
     public int SkinNum;
+    public bool Defaul;
 
-    private void Update()
+    GameObject ground;
+    Player player;
+
+    public void Start()
+    {
+        ground = GameObject.Find("Ground");
+        player = ground.GetComponent<Player>();
+        Defaul = true;
+
+    }
+    public void Update()
     {
         storeAnime.SetInteger("SkinNumber", SkinNum);
+        storeAnime.SetBool("Default", Defaul);
 
-        GameObject ground = GameObject.Find("Ground");
-        Player player = ground.GetComponent<Player>();
         if (player.BeachSkin == 0)
         {
             SkinNum = 0;

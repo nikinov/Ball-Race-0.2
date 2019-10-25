@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     //Rigidbody RS;
 
     public int BeachSkin;
+    //public int SkNum;
 
     private void Awake()
     {
@@ -72,5 +73,19 @@ public class Player : MonoBehaviour
     public void Red()
     {
         BeachSkin = 2;
+    }
+    public void right ()
+    {
+        if (BeachSkin <= 1)
+        {
+            BeachSkin += 1;
+        }
+    }
+    public void Left ()
+    {
+        if (BeachSkin >= 1)
+        {
+            BeachSkin -= 1;
+        }
     }
 }
