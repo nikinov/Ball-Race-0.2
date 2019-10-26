@@ -15,6 +15,15 @@ TagManager:
   - BeachRedSkin
   - BeachGreenSkin
   - BeachPinkSkin
+  - WhiteAsphaltSkin
+  - RedAsphaltSkin
+  - GreenAsphaltSkin
+  - BlueAsphaltSkin
+  - BlackAsphaltSkin
+  - PurpleAsphaltSkin
+  - YellowAsphaltSkin
+  - LiteBlueAsphaltSkin
+  - SimpleGamesSkin
   layers:
   - Default
   - TransparentFX
