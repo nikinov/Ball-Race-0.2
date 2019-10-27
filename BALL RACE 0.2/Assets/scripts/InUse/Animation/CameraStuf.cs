@@ -6,6 +6,7 @@ public class CameraStuf : MonoBehaviour
 {
     public GameObject canv;
     public bool PlayButton;
+    public bool PayButton;
 
     private void Start()
     {

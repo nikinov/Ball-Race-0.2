@@ -18,6 +18,8 @@ public class Player : MonoBehaviour
     GameObject AsphaltBlackSkin;
     GameObject SimpleGamesSkin;
 
+    public bool Unlocked;
+
     //Rigidbody GS;
     //Rigidbody BS;
     //Rigidbody RS;

@@ -8,8 +8,8 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: Play
+  - m_ConditionMode: 6
+    m_ConditionEvent: Buttons
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5501847940707432841}
@@ -31,24 +31,18 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Buttons
+  m_Name: Pay
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: SkinNumber
+  - m_Name: Buttons
     m_Type: 3
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 0}
-  - m_Name: Play
-    m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
-    m_Name: Play
+    m_Name: Pay
     m_StateMachine: {fileID: 3921908084283709811}
     m_Mask: {fileID: 0}
     m_Motions: []
@@ -92,8 +86,8 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: Play
+  - m_ConditionMode: 6
+    m_ConditionEvent: Buttons
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 6903538548275560736}
@@ -168,7 +162,7 @@ AnimatorStateMachine:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Play
+  m_Name: Pay
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 5501847940707432841}
@@ -247,9 +241,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 2
-    m_ConditionEvent: Play
-    m_EventTreshold: 0
+  - m_ConditionMode: 6
+    m_ConditionEvent: Buttons
+    m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3177496234015959100}
   m_Solo: 0
@@ -285,7 +279,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 4c99cec15116d40838fcc016f08b7c15, type: 2}
+  m_Motion: {fileID: 7400000, guid: a37559f9b40954566b308c7e3f79b4f4, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -299,9 +293,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 2
-    m_ConditionEvent: Play
-    m_EventTreshold: 0
+  - m_ConditionMode: 6
+    m_ConditionEvent: Buttons
+    m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5501847940707432841}
   m_Solo: 0
