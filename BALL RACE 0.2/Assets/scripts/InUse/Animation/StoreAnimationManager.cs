@@ -12,7 +12,15 @@ public class StoreAnimationManager : MonoBehaviour
     public int Buttons;
 
     public Player player;
-    bool unlocked;
+    bool skin3;
+    bool skin4;
+    bool skin5;
+    bool skin6;
+    bool skin7;
+    bool skin8;
+    bool skin9;
+    bool skin10;
+    bool skin11;
 
     GameObject ground;
 
@@ -23,11 +31,15 @@ public class StoreAnimationManager : MonoBehaviour
     }
     public void Update()
     {
-        unlocked = player.Unlocked;
-        if (unlocked is true)
-        {
-
-        }
+        skin3 = player.Skin3;
+        skin4 = player.Skin4;
+        skin5 = player.Skin5;
+        skin6 = player.Skin6;
+        skin7 = player.Skin7;
+        skin8 = player.Skin8;
+        skin9 = player.Skin9;
+        skin10 = player.Skin10;
+        skin11 = player.Skin11;
 
         storeAnime.SetInteger("SkinNumber", SkinNum);
         Play.SetInteger("Buttons", Buttons);
@@ -51,7 +63,7 @@ public class StoreAnimationManager : MonoBehaviour
         if (player.BeachSkin == 3)
         {
             SkinNum = 3;
-            if (unlocked is true)
+            if (skin3 is true)
             {
                 Buttons = 0;
             }
@@ -63,7 +75,7 @@ public class StoreAnimationManager : MonoBehaviour
         if (player.BeachSkin == 4)
         {
             SkinNum = 4;
-            if (unlocked is true)
+            if (skin4 is true)
             {
                 Buttons = 0;
             }
@@ -75,7 +87,7 @@ public class StoreAnimationManager : MonoBehaviour
         if (player.BeachSkin == 5)
         {
             SkinNum = 5;
-            if (unlocked is true)
+            if (skin5 is true)
             {
                 Buttons = 0;
             }
@@ -87,7 +99,7 @@ public class StoreAnimationManager : MonoBehaviour
         if (player.BeachSkin == 6)
         {
             SkinNum = 6;
-            if (unlocked is true)
+            if (skin6 is true)
             {
                 Buttons = 0;
             }
@@ -99,7 +111,7 @@ public class StoreAnimationManager : MonoBehaviour
         if (player.BeachSkin == 7)
         {
             SkinNum = 7;
-            if (unlocked is true)
+            if (skin7 is true)
             {
                 Buttons = 0;
             }
@@ -111,7 +123,7 @@ public class StoreAnimationManager : MonoBehaviour
         if (player.BeachSkin == 8)
         {
             SkinNum = 8;
-            if (unlocked is true)
+            if (skin8 is true)
             {
                 Buttons = 0;
             }
@@ -123,7 +135,7 @@ public class StoreAnimationManager : MonoBehaviour
         if (player.BeachSkin == 9)
         {
             SkinNum = 9;
-            if (unlocked is true)
+            if (skin9 is true)
             {
                 Buttons = 0;
             }
@@ -135,7 +147,7 @@ public class StoreAnimationManager : MonoBehaviour
         if (player.BeachSkin == 10)
         {
             SkinNum = 10;
-            if (unlocked is true)
+            if (skin10 is true)
             {
                 Buttons = 0;
             }
@@ -147,7 +159,7 @@ public class StoreAnimationManager : MonoBehaviour
         if (player.BeachSkin == 11)
         {
             SkinNum = 11;
-            if (unlocked is true)
+            if (skin11 is true)
             {
                 Buttons = 0;
             }

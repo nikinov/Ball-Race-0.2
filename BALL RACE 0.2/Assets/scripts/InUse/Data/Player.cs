@@ -18,7 +18,19 @@ public class Player : MonoBehaviour
     GameObject AsphaltBlackSkin;
     GameObject SimpleGamesSkin;
 
+    public bool Skin3;
+    public bool Skin4;
+    public bool Skin5;
+    public bool Skin6;
+    public bool Skin7;
+    public bool Skin8;
+    public bool Skin9;
+    public bool Skin10;
+    public bool Skin11;
+
     public bool Unlocked;
+
+    public int Cash;
 
     //Rigidbody GS;
     //Rigidbody BS;
@@ -147,6 +159,15 @@ public class Player : MonoBehaviour
         GameData data = SaveGame.LoadData();
 
         BeachSkin = data.Pink;
+        Skin3 = data.skin3;
+        Skin4 = data.skin4;
+        Skin5 = data.skin5;
+        Skin6 = data.skin6;
+        Skin7 = data.skin7;
+        Skin8 = data.skin8;
+        Skin9 = data.skin9;
+        Skin10 = data.skin10;
+        Skin11 = data.skin11;
     }
     public void right ()
     {
@@ -160,6 +181,114 @@ public class Player : MonoBehaviour
         if (BeachSkin >= 1)
         {
             BeachSkin -= 1;
+        }
+    }
+    public void UnlockS3()
+    {
+        if (Cash - 200 > 0)
+        {
+            Cash -= 200;
+            Skin3 = true;
+        }
+        else
+        {
+            Debug.Log("You Don't have enought cash");
+        }
+    }
+    public void UnlockS4()
+    {
+        if (Cash - 200 > 0)
+        {
+            Cash -= 200;
+            Skin4 = true;
+        }
+        else
+        {
+            Debug.Log("You Don't have enought cash");
+        }
+    }
+    public void UnlockS5()
+    {
+        if (Cash - 200 > 0)
+        {
+            Cash -= 200;
+            Skin5 = true;
+        }
+        else
+        {
+            Debug.Log("You Don't have enought cash");
+        }
+    }
+    public void UnlockS6()
+    {
+        if (Cash - 200 > 0)
+        {
+            Cash -= 200;
+            Skin6 = true;
+        }
+        else
+        {
+            Debug.Log("You Don't have enought cash");
+        }
+    }
+    public void UnlockS7()
+    {
+        if (Cash - 200 > 0)
+        {
+            Cash -= 200;
+            Skin7 = true;
+        }
+        else
+        {
+            Debug.Log("You Don't have enought cash");
+        }
+    }
+    public void UnlockS8()
+    {
+        if (Cash - 200 > 0)
+        {
+            Cash -= 200;
+            Skin8 = true;
+        }
+        else
+        {
+            Debug.Log("You Don't have enought cash");
+        }
+    }
+    public void UnlockS9()
+    {
+        if (Cash - 200 > 0)
+        {
+            Cash -= 200;
+            Skin9 = true;
+        }
+        else
+        {
+            Debug.Log("You Don't have enought cash");
+        }
+    }
+    public void UnlockS10()
+    {
+        if (Cash - 200 > 0)
+        {
+            Cash -= 200;
+            Skin10 = true;
+        }
+        else
+        {
+            Debug.Log("You Don't have enought cash");
+        }
+    }
+    public void UnlockS11()
+    {
+        if (Cash - 2000 > 0)
+        {
+            Cash -= 2000;
+            Skin11 = true;
+        }
+        else
+        {
+            Debug.Log("You Don't have enought cash");
         }
     }
 }

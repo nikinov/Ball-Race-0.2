@@ -7,11 +7,13 @@ public class CameraStuf : MonoBehaviour
     public GameObject canv;
     public bool PlayButton;
     public bool PayButton;
+    public Player player;
 
     private void Start()
     {
         canv.SetActive(false);
-        PlayButton = false;
+        PlayButton = true;
+        PayButton = true;
     }
     public void SetCanf ()
     {
@@ -21,6 +23,6 @@ public class CameraStuf : MonoBehaviour
     public void SetCant()
     {
         canv.SetActive(true);
-        PlayButton = false;
     }
+    
 }
