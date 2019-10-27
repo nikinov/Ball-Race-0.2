@@ -185,7 +185,7 @@ public class Player : MonoBehaviour
     }
     public void UnlockS3()
     {
-        if (Cash - 200 > 0)
+        if (Cash - 200 >= 0)
         {
             Cash -= 200;
             Skin3 = true;
@@ -197,7 +197,7 @@ public class Player : MonoBehaviour
     }
     public void UnlockS4()
     {
-        if (Cash - 200 > 0)
+        if (Cash - 200 >= 0)
         {
             Cash -= 200;
             Skin4 = true;
@@ -209,7 +209,7 @@ public class Player : MonoBehaviour
     }
     public void UnlockS5()
     {
-        if (Cash - 200 > 0)
+        if (Cash - 200 >= 0)
         {
             Cash -= 200;
             Skin5 = true;
@@ -221,7 +221,7 @@ public class Player : MonoBehaviour
     }
     public void UnlockS6()
     {
-        if (Cash - 200 > 0)
+        if (Cash - 200 >= 0)
         {
             Cash -= 200;
             Skin6 = true;
@@ -233,7 +233,7 @@ public class Player : MonoBehaviour
     }
     public void UnlockS7()
     {
-        if (Cash - 200 > 0)
+        if (Cash - 200 >= 0)
         {
             Cash -= 200;
             Skin7 = true;
@@ -245,7 +245,7 @@ public class Player : MonoBehaviour
     }
     public void UnlockS8()
     {
-        if (Cash - 200 > 0)
+        if (Cash - 200 >= 0)
         {
             Cash -= 200;
             Skin8 = true;
@@ -257,7 +257,7 @@ public class Player : MonoBehaviour
     }
     public void UnlockS9()
     {
-        if (Cash - 200 > 0)
+        if (Cash - 200 >= 0)
         {
             Cash -= 200;
             Skin9 = true;
@@ -269,7 +269,7 @@ public class Player : MonoBehaviour
     }
     public void UnlockS10()
     {
-        if (Cash - 200 > 0)
+        if (Cash - 200 >= 0)
         {
             Cash -= 200;
             Skin10 = true;
@@ -281,7 +281,7 @@ public class Player : MonoBehaviour
     }
     public void UnlockS11()
     {
-        if (Cash - 2000 > 0)
+        if (Cash - 2000 >= 0)
         {
             Cash -= 2000;
             Skin11 = true;

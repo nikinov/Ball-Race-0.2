@@ -9,6 +9,10 @@ public class PlayerMovement : MonoBehaviour
     public float forwardSpeed;
     public float forwardForce;
     public float SideSpeed;
+
+    float Horizontal;
+    float Vertical;
+
     float Chek;
     public GameObject DethUI;
     public GameObject CompUI;
@@ -50,8 +54,8 @@ public class PlayerMovement : MonoBehaviour
 
         //transform.Rotate(forwardForce * Time.deltaTime, 0, 0);
 
-        float Horizontal = Input.GetAxis("Horizontal");
-        float Vertical = Input.GetAxis("Vertical");
+        Horizontal = Input.GetAxis("Horizontal");
+        Vertical = Input.GetAxis("Vertical");
 
         Vector3 move = new Vector3(0.0f, 0.0f, Vertical);
         Vector3 Sidemove = new Vector3(Horizontal, 0.0f, 0.0f);
@@ -64,5 +68,21 @@ public class PlayerMovement : MonoBehaviour
         speed = 0;
         forwardForce = 0;
         SideSpeed = 0;
+    }
+    public void GoLeft ()
+    {
+        Horizontal += -10000;
+    }
+    public void GoRight ()
+    {
+        Horizontal += 10000;
+    }
+    public void Forward ()
+    {
+        Vertical += 10000;
+    }
+    public void Back ()
+    {
+        Vertical += -10000;
     }
 }
