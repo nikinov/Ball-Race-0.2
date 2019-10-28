@@ -39,6 +39,7 @@ public class score : MonoBehaviour
             scoreFinal.text = Score.ToString("");
             Timeing.text = timer.ToString("F2");
             timings = times.ToArray();
+            player.MakeTimeText();
         }
         TimePerScore();
     }
@@ -47,7 +48,7 @@ public class score : MonoBehaviour
         if (PreScore * 10 == Score)
         {
             times.Add(timer);
-            NumOfTimes++;
+            NumOfTimes += 1;
             PreScore = PreScore * 10;
             times[NumOfTimes] = timer;
 

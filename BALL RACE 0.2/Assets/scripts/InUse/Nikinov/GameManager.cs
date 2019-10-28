@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
 
     GameObject GamePanel;
 
+    public GameObject Speedo;
+
     private void Start()
     {
         DethPanel = GameObject.FindGameObjectWithTag("DethPanel");
@@ -23,6 +25,7 @@ public class GameManager : MonoBehaviour
         CompleteLevel.SetActive(false);
         pauseLevel.SetActive(false);
         GamePanel.SetActive(true);
+        Speedo.SetActive(true);
     }
 
     public void completeLevel()
@@ -35,12 +38,14 @@ public class GameManager : MonoBehaviour
         pauseLevel.SetActive(true);
         GamePanel.SetActive(false);
         Time.timeScale = 0f;
+        Speedo.SetActive(false);
     }
     public void ResumeLevel()
     {
         pauseLevel.SetActive(false);
         GamePanel.SetActive(true);
         Time.timeScale = 1f;
+        Speedo.SetActive(true);
     }
 
     public void EndGame()
@@ -73,5 +78,6 @@ public class GameManager : MonoBehaviour
     public void GoToMainMenu()
     {
         SceneManager.LoadScene(sceneBuildIndex: 0);
+        Time.timeScale = 1f;
     }
 }

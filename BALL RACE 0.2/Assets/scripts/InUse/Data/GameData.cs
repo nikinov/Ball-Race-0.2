@@ -16,7 +16,7 @@ public class GameData
     public bool skin9;
     public bool skin10;
     public bool skin11;
-    public float[] timis;
+    //public float[] timis;
     private GameData playerData;
     private GameData player;
 
@@ -33,6 +33,6 @@ public class GameData
         skin9 = player.Skin9;
         skin10 = player.Skin10;
         skin11 = player.Skin11;
-        timis = player.timing;
+        //timis = player.timing;
     }
 }

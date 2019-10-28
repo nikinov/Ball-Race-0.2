@@ -41,17 +41,26 @@ public class Player : MonoBehaviour
     //public int SkNum;
     public score Score;
     public float[] timing;
-    public List<float> SavedTimes;
+    //public List<float> SavedTimes;
     public List<float> NotSavedTimes;
-    public GameObject SaveButton;
+    public Text timingText;
     public Text timingText0;
     public Text timingText1;
     public Text timingText2;
     public Text timingText3;
+    public Text timingText4;
+    public Text timingText5;
+    public Text timingText6;
+    public Text timingText7;
+    public GameObject timingTextUI;
     public GameObject timingText0UI;
     public GameObject timingText1UI;
     public GameObject timingText2UI;
     public GameObject timingText3UI;
+    public GameObject timingText4UI;
+    public GameObject timingText5UI;
+    public GameObject timingText6UI;
+    public GameObject timingText7UI;
 
     private void Awake()
     {
@@ -71,10 +80,15 @@ public class Player : MonoBehaviour
         //BS = BeachBlueSkin.GetComponent<Rigidbody>();
         //RS = BeachRedSkin.GetComponent<Rigidbody>();
         LoadData();
+        timingTextUI.SetActive(false);
         timingText0UI.SetActive(false);
         timingText1UI.SetActive(false);
         timingText2UI.SetActive(false);
         timingText3UI.SetActive(false);
+        timingText4UI.SetActive(false);
+        timingText5UI.SetActive(false);
+        timingText6UI.SetActive(false);
+        timingText7UI.SetActive(false);
     }
     public void ToPlay ()
     {
@@ -83,6 +97,12 @@ public class Player : MonoBehaviour
     }
     public void MakeTimeText()
     {
+        if (NotSavedTimes.Count >= 2)
+        {
+            NotSavedTimes[1] = Mathf.Round(NotSavedTimes[1] * 100) / 100;
+            timingText.text = NotSavedTimes[1].ToString("");
+            timingTextUI.SetActive(true);
+        }
         if (NotSavedTimes.Count >= 3)
         {
             NotSavedTimes[2] = Mathf.Round(NotSavedTimes[2] * 100) / 100;
@@ -107,6 +127,30 @@ public class Player : MonoBehaviour
             timingText3.text = NotSavedTimes[5].ToString("");
             timingText3UI.SetActive(true);
         }
+        if (NotSavedTimes.Count >= 7)
+        {
+            NotSavedTimes[6] = Mathf.Round(NotSavedTimes[6] * 100) / 100;
+            timingText4.text = NotSavedTimes[6].ToString("");
+            timingText4UI.SetActive(true);
+        }
+        if (NotSavedTimes.Count >= 8)
+        {
+            NotSavedTimes[7] = Mathf.Round(NotSavedTimes[7] * 100) / 100;
+            timingText5.text = NotSavedTimes[7].ToString("");
+            timingText5UI.SetActive(true);
+        }
+        if (NotSavedTimes.Count >= 9)
+        {
+            NotSavedTimes[8] = Mathf.Round(NotSavedTimes[8] * 100) / 100;
+            timingText6.text = NotSavedTimes[8].ToString("");
+            timingText6UI.SetActive(true);
+        }
+        if (NotSavedTimes.Count >= 10)
+        {
+            NotSavedTimes[9] = Mathf.Round(NotSavedTimes[9] * 100) / 100;
+            timingText7.text = NotSavedTimes[9].ToString("");
+            timingText7UI.SetActive(true);
+        }
     }
     public void SetSkinsFalse()
     {
@@ -123,13 +167,9 @@ public class Player : MonoBehaviour
         AsphaltBlackSkin.SetActive(false);
         SimpleGamesSkin.SetActive(false);
     }
-    public void ThisIstheBest()
-    {
-        timing = Score.timings;
-        SaveButton.SetActive(false);
-    }
     private void Update()
     {
+        SaveData();
         NotSavedTimes = Score.times;
         timing = Score.timings;
         if (BeachSkin < 0)
@@ -295,12 +335,12 @@ public class Player : MonoBehaviour
         Skin10 = data.skin10;
         Skin11 = data.skin11;
     }
-    public void LoatTimeData()
-    {
-        GameData data = SaveGame.LoadData();
+    //public void LoatTimeData()
+    //{
+    //    GameData data = SaveGame.LoadData();
 
-        SavedTimes.AddRange(data.timis);
-    }
+    //    SavedTimes.AddRange(data.timis);
+    //}
     public void right ()
     {
         if (BeachSkin <= 10)
