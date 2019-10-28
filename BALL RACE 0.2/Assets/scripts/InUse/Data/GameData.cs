@@ -5,6 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class GameData
 {
+    public int cash;
     public int Pink;
     public bool skin3;
     public bool skin4;
@@ -15,11 +16,13 @@ public class GameData
     public bool skin9;
     public bool skin10;
     public bool skin11;
+    public float[] timis;
     private GameData playerData;
     private GameData player;
 
     public GameData (Player player)
     {
+        cash = player.Cash;
         Pink = player.BeachSkin;
         skin3 = player.Skin3;
         skin4 = player.Skin4;
@@ -30,5 +33,6 @@ public class GameData
         skin9 = player.Skin9;
         skin10 = player.Skin10;
         skin11 = player.Skin11;
+        timis = player.timing;
     }
 }

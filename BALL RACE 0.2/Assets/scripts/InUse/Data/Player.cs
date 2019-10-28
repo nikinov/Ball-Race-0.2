@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -38,6 +39,19 @@ public class Player : MonoBehaviour
 
     public int BeachSkin;
     //public int SkNum;
+    public score Score;
+    public float[] timing;
+    public List<float> SavedTimes;
+    public List<float> NotSavedTimes;
+    public GameObject SaveButton;
+    public Text timingText0;
+    public Text timingText1;
+    public Text timingText2;
+    public Text timingText3;
+    public GameObject timingText0UI;
+    public GameObject timingText1UI;
+    public GameObject timingText2UI;
+    public GameObject timingText3UI;
 
     private void Awake()
     {
@@ -57,10 +71,42 @@ public class Player : MonoBehaviour
         //BS = BeachBlueSkin.GetComponent<Rigidbody>();
         //RS = BeachRedSkin.GetComponent<Rigidbody>();
         LoadData();
+        timingText0UI.SetActive(false);
+        timingText1UI.SetActive(false);
+        timingText2UI.SetActive(false);
+        timingText3UI.SetActive(false);
     }
     public void ToPlay ()
     {
+        SaveData();
         SceneManager.LoadScene(sceneBuildIndex: 0);
+    }
+    public void MakeTimeText()
+    {
+        if (NotSavedTimes.Count >= 3)
+        {
+            NotSavedTimes[2] = Mathf.Round(NotSavedTimes[2] * 100) / 100;
+            timingText0.text = NotSavedTimes[2].ToString("");
+            timingText0UI.SetActive(true);
+        }
+        if (NotSavedTimes.Count >= 4)
+        {
+            NotSavedTimes[3] = Mathf.Round(NotSavedTimes[3] * 100) / 100;
+            timingText1.text = NotSavedTimes[3].ToString("");
+            timingText1UI.SetActive(true);
+        }
+        if (NotSavedTimes.Count >= 5)
+        {
+            NotSavedTimes[4] = Mathf.Round(NotSavedTimes[4] * 100) / 100;
+            timingText2.text = NotSavedTimes[4].ToString("");
+            timingText2UI.SetActive(true);
+        }
+        if (NotSavedTimes.Count >= 6)
+        {
+            NotSavedTimes[5] = Mathf.Round(NotSavedTimes[5] * 100) / 100;
+            timingText3.text = NotSavedTimes[5].ToString("");
+            timingText3UI.SetActive(true);
+        }
     }
     public void SetSkinsFalse()
     {
@@ -77,9 +123,15 @@ public class Player : MonoBehaviour
         AsphaltBlackSkin.SetActive(false);
         SimpleGamesSkin.SetActive(false);
     }
+    public void ThisIstheBest()
+    {
+        timing = Score.timings;
+        SaveButton.SetActive(false);
+    }
     private void Update()
     {
-        SaveData();
+        NotSavedTimes = Score.times;
+        timing = Score.timings;
         if (BeachSkin < 0)
         {
             BeachSkin = 0;
@@ -118,7 +170,6 @@ public class Player : MonoBehaviour
             SetSkinsFalse();
             AsphaltBlueSkin.SetActive(true);
         }
-        SaveData();
         if (BeachSkin == 6)
         {
             SetSkinsFalse();
@@ -149,6 +200,81 @@ public class Player : MonoBehaviour
             SetSkinsFalse();
             SimpleGamesSkin.SetActive(true);
         }
+        if (BeachSkin is 0)
+        {
+            SaveData();
+        }
+        if (BeachSkin is 1)
+        {
+            SaveData();
+        }
+        if (BeachSkin is 2)
+        {
+            SaveData();
+        }
+        if (BeachSkin is 3)
+        {
+            if (Skin3 is true)
+            {
+                SaveData();
+            }
+        }
+        if (BeachSkin is 4)
+        {
+            if (Skin4 is true)
+            {
+                SaveData();
+            }
+        }
+        if (BeachSkin is 5)
+        {
+            if (Skin5 is true)
+            {
+                SaveData();
+            }
+        }
+        if (BeachSkin is 6)
+        {
+            if (Skin6 is true)
+            {
+                SaveData();
+            }
+        }
+        if (BeachSkin is 7)
+        {
+            if (Skin7 is true)
+            {
+                SaveData();
+            }
+        }
+        if (BeachSkin is 8)
+        {
+            if (Skin8 is true)
+            {
+                SaveData();
+            }
+        }
+        if (BeachSkin is 9)
+        {
+            if (Skin9 is true)
+            {
+                SaveData();
+            }
+        }
+        if (BeachSkin is 10)
+        {
+            if (Skin10 is true)
+            {
+                SaveData();
+            }
+        }
+        if (BeachSkin is 11)
+        {
+            if (Skin11 is true)
+            {
+                SaveData();
+            }
+        }
     }
     public void SaveData ()
     {
@@ -168,6 +294,12 @@ public class Player : MonoBehaviour
         Skin9 = data.skin9;
         Skin10 = data.skin10;
         Skin11 = data.skin11;
+    }
+    public void LoatTimeData()
+    {
+        GameData data = SaveGame.LoadData();
+
+        SavedTimes.AddRange(data.timis);
     }
     public void right ()
     {

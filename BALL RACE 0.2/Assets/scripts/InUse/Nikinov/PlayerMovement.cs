@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     float Chek;
     public GameObject DethUI;
     public GameObject CompUI;
+    public GameObject Speedometorr;
 
     public Rigidbody rb;
     // Start is called before the first frame update
@@ -68,21 +69,22 @@ public class PlayerMovement : MonoBehaviour
         speed = 0;
         forwardForce = 0;
         SideSpeed = 0;
+        Speedometorr.SetActive(false);
     }
     public void GoLeft ()
     {
-        Horizontal += -10000;
+
     }
     public void GoRight ()
     {
-        Horizontal += 10000;
+
     }
     public void Forward ()
     {
-        Vertical += 10000;
+
     }
     public void Back ()
     {
-        Vertical += -10000;
+
     }
 }
