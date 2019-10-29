@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
 
     GameObject GamePanel;
 
+    public GameObject BlackPanelUI;
+
     public GameObject Speedo;
 
     private void Start()
@@ -65,6 +67,7 @@ public class GameManager : MonoBehaviour
     void Deth()
     {
         DethPanel.SetActive(true);
+        BlackPanelUI.SetActive(false);
     }
     public void ToMap()
     {
