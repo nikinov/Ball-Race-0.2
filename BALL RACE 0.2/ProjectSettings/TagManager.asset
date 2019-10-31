@@ -24,6 +24,7 @@ TagManager:
   - YellowAsphaltSkin
   - LiteBlueAsphaltSkin
   - SimpleGamesSkin
+  - Coin
   layers:
   - Default
   - TransparentFX

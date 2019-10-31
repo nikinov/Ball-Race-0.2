@@ -32,6 +32,7 @@ public class Player : MonoBehaviour
     public bool Unlocked;
 
     public int Cash;
+    public float HighSacore;
 
     //Rigidbody GS;
     //Rigidbody BS;
@@ -334,6 +335,7 @@ public class Player : MonoBehaviour
         Skin9 = data.skin9;
         Skin10 = data.skin10;
         Skin11 = data.skin11;
+        Cash = data.cash;
     }
     //public void LoatTimeData()
     //{
@@ -341,6 +343,12 @@ public class Player : MonoBehaviour
 
     //    SavedTimes.AddRange(data.timis);
     //}
+    public void LoadHighScore()
+    {
+        GameData data = SaveGame.LoadData();
+
+        HighSacore = data.highScore;
+    }
     public void right ()
     {
         if (BeachSkin <= 10)
@@ -462,5 +470,9 @@ public class Player : MonoBehaviour
         {
             Debug.Log("You Don't have enought cash");
         }
+    }
+    public void Add1Cash()
+    {
+        Cash += 1;
     }
 }

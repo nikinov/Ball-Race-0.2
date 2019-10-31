@@ -1,22 +1,23 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     bool GameHasEnded = false;
 
     GameObject CompleteLevel;
-
     GameObject pauseLevel;
-
     GameObject DethPanel;
-
     GameObject GamePanel;
 
     public GameObject BlackPanelUI;
 
     public GameObject Speedo;
+
+    public Text YouErned;
+    public int yeGot;
 
     private void Start()
     {
@@ -70,6 +71,7 @@ public class GameManager : MonoBehaviour
     {
         DethPanel.SetActive(true);
         BlackPanelUI.SetActive(false);
+        YouErned.text = yeGot.ToString("");
     }
     public void ToMap()
     {

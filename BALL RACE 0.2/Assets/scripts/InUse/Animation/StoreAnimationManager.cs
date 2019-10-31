@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StoreAnimationManager : MonoBehaviour
 {
@@ -22,7 +23,11 @@ public class StoreAnimationManager : MonoBehaviour
     bool skin10;
     bool skin11;
 
+    int TheMonee;
+
     GameObject ground;
+
+    public Text Lit;
 
     public void Start()
     {
@@ -31,6 +36,8 @@ public class StoreAnimationManager : MonoBehaviour
     }
     public void Update()
     {
+        TheMonee = player.Cash;
+        Lit.text = TheMonee.ToString("");
         skin3 = player.Skin3;
         skin4 = player.Skin4;
         skin5 = player.Skin5;
