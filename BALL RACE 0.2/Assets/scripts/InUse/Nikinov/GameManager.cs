@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -28,6 +29,7 @@ public class GameManager : MonoBehaviour
         pauseLevel.SetActive(false);
         GamePanel.SetActive(true);
         Speedo.SetActive(true);
+        StartCoroutine(SetBlackFalse());
     }
 
     public void completeLevel()
@@ -82,5 +84,11 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(sceneBuildIndex: 0);
         Time.timeScale = 1f;
+    }
+    IEnumerator SetBlackFalse()
+    {
+        BlackPanelUI.SetActive(true);
+        yield return new WaitForSeconds(1.5f);
+        BlackPanelUI.SetActive(false);
     }
 }
