@@ -23,7 +23,7 @@ public class score : MonoBehaviour
 
     private void Start()
     {
-        //player.LoadHighScore();
+        player.LoadHighScore();
         times = new List<float>();
         times.Add(1f);
     }

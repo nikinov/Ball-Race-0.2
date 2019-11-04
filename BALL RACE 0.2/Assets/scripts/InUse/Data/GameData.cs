@@ -34,7 +34,7 @@ public class GameData
         skin9 = player.Skin9;
         skin10 = player.Skin10;
         skin11 = player.Skin11;
-        //highScore = player.HighSacore;
+        highScore = player.HighSacore;
         //timis = player.timing;
     }
 }
