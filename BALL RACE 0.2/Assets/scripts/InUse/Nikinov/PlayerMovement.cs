@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Ditzelgames;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -55,8 +56,8 @@ public class PlayerMovement : MonoBehaviour
 
         //transform.Rotate(forwardForce * Time.deltaTime, 0, 0);
 
-        Horizontal = Input.GetAxis("Horizontal");
-        Vertical = Input.GetAxis("Vertical");
+        Horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
+        Vertical = CrossPlatformInputManager.GetAxis("Vertical");
 
         Vector3 move = new Vector3(0.0f, 0.0f, Vertical);
         Vector3 Sidemove = new Vector3(Horizontal, 0.0f, 0.0f);
@@ -73,18 +74,18 @@ public class PlayerMovement : MonoBehaviour
     }
     public void GoLeft ()
     {
-
+        rb.AddForce(-SideSpeed * Time.deltaTime, 0.0f, 0.0f);
     }
     public void GoRight ()
     {
-
+        rb.AddForce(SideSpeed * Time.deltaTime, 0.0f, 0.0f);
     }
     public void Forward ()
     {
-
+        rb.AddForce(0.0f, 0.0f, speed * Time.deltaTime);
     }
     public void Back ()
     {
-
+        rb.AddForce(0.0f, 0.0f, -speed * Time.deltaTime);
     }
 }

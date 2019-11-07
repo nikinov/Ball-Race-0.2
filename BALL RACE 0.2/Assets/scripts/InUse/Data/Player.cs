@@ -19,20 +19,20 @@ public class Player : MonoBehaviour
     GameObject AsphaltBlackSkin;
     GameObject SimpleGamesSkin;
 
-    public bool Skin3;
-    public bool Skin4;
-    public bool Skin5;
-    public bool Skin6;
-    public bool Skin7;
-    public bool Skin8;
-    public bool Skin9;
-    public bool Skin10;
-    public bool Skin11;
+    public int Skin3;
+    public int Skin4;
+    public int Skin5;
+    public int Skin6;
+    public int Skin7;
+    public int Skin8;
+    public int Skin9;
+    public int Skin10;
+    public int Skin11;
 
     public bool Unlocked;
 
     public int Cash;
-    public float HighSacore;
+    public float HighScore;
 
     //Rigidbody GS;
     //Rigidbody BS;
@@ -80,7 +80,7 @@ public class Player : MonoBehaviour
         //GS = BeachGreenSkin.GetComponent<Rigidbody>();
         //BS = BeachBlueSkin.GetComponent<Rigidbody>();
         //RS = BeachRedSkin.GetComponent<Rigidbody>();
-        LoadData();
+        LoadData2();
         timingTextUI.SetActive(false);
         timingText0UI.SetActive(false);
         timingText1UI.SetActive(false);
@@ -91,9 +91,9 @@ public class Player : MonoBehaviour
         timingText6UI.SetActive(false);
         timingText7UI.SetActive(false);
     }
-    public void ToPlay ()
+    public void ToPlay()
     {
-        SaveData();
+        SaveData2();
         SceneManager.LoadScene(sceneBuildIndex: 0);
     }
     public void MakeTimeText()
@@ -170,7 +170,6 @@ public class Player : MonoBehaviour
     }
     private void Update()
     {
-        SaveData();
         NotSavedTimes = Score.times;
         timing = Score.timings;
         if (BeachSkin < 0)
@@ -241,101 +240,134 @@ public class Player : MonoBehaviour
             SetSkinsFalse();
             SimpleGamesSkin.SetActive(true);
         }
-        if (BeachSkin is 0)
+        if (BeachSkin == 0)
         {
-            SaveData();
+            SaveData2();
         }
-        if (BeachSkin is 1)
+        if (BeachSkin == 1)
         {
-            SaveData();
+            SaveData2();
         }
-        if (BeachSkin is 2)
+        if (BeachSkin == 2)
         {
-            SaveData();
+            SaveData2();
         }
-        if (BeachSkin is 3)
+        if (BeachSkin == 3)
         {
-            if (Skin3 is true)
+            if (Skin3 == 1)
             {
-                SaveData();
+                SaveData2();
             }
         }
-        if (BeachSkin is 4)
+        if (BeachSkin == 4)
         {
-            if (Skin4 is true)
+            if (Skin4 == 1)
             {
-                SaveData();
+                SaveData2();
             }
         }
-        if (BeachSkin is 5)
+        if (BeachSkin == 5)
         {
-            if (Skin5 is true)
+            if (Skin5 == 1)
             {
-                SaveData();
+                SaveData2();
             }
         }
-        if (BeachSkin is 6)
+        if (BeachSkin == 6)
         {
-            if (Skin6 is true)
+            if (Skin6 == 1)
             {
-                SaveData();
+                SaveData2();
             }
         }
-        if (BeachSkin is 7)
+        if (BeachSkin == 7)
         {
-            if (Skin7 is true)
+            if (Skin7 == 1)
             {
-                SaveData();
+                SaveData2();
             }
         }
-        if (BeachSkin is 8)
+        if (BeachSkin == 8)
         {
-            if (Skin8 is true)
+            if (Skin8 == 1)
             {
-                SaveData();
+                SaveData2();
             }
         }
-        if (BeachSkin is 9)
+        if (BeachSkin == 9)
         {
-            if (Skin9 is true)
+            if (Skin9 == 1)
             {
-                SaveData();
+                SaveData2();
             }
         }
-        if (BeachSkin is 10)
+        if (BeachSkin == 10)
         {
-            if (Skin10 is true)
+            if (Skin10 == 1)
             {
-                SaveData();
+                SaveData2();
             }
         }
-        if (BeachSkin is 11)
+        if (BeachSkin == 11)
         {
-            if (Skin11 is true)
+            if (Skin11 == 1)
             {
-                SaveData();
+                SaveData2();
             }
         }
     }
-    public void SaveData ()
-    {
-        SaveGame.saveData(this);
-    }
-    public void LoadData ()
-    {
-        GameData data = SaveGame.LoadData();
+    //public void SaveData1()
+    //{
+    //    SaveGame.saveData(this);
+    //}
+    //public void LoadData1()
+    //{
+    //    GameData data = SaveGame.LoadData();
 
-        BeachSkin = data.Pink;
-        Skin3 = data.skin3;
-        Skin4 = data.skin4;
-        Skin5 = data.skin5;
-        Skin6 = data.skin6;
-        Skin7 = data.skin7;
-        Skin8 = data.skin8;
-        Skin9 = data.skin9;
-        Skin10 = data.skin10;
-        Skin11 = data.skin11;
-        Cash = data.cash;
+    //    BeachSkin = data.Pink;
+    //    Skin3 = data.skin3;
+    //    Skin4 = data.skin4;
+    //    Skin5 = data.skin5;
+    //    Skin6 = data.skin6;
+    //    Skin7 = data.skin7;
+    //    Skin8 = data.skin8;
+    //    Skin9 = data.skin9;
+    //    Skin10 = data.skin10;
+    //    Skin11 = data.skin11;
+    //    Cash = data.cash;
+    //}
+    public void SaveData2()
+    {
+        PlayerPrefs.SetInt("Pink", BeachSkin);
+        PlayerPrefs.SetInt("skin3", Skin3);
+        PlayerPrefs.SetInt("skin4", Skin4);
+        PlayerPrefs.SetInt("skin5", Skin5);
+        PlayerPrefs.SetInt("skin6", Skin6);
+        PlayerPrefs.SetInt("skin7", Skin7);
+        PlayerPrefs.SetInt("skin8", Skin8);
+        PlayerPrefs.SetInt("skin9", Skin9);
+        PlayerPrefs.SetInt("skin10", Skin10);
+        PlayerPrefs.SetInt("skin11", Skin11);
+        PlayerPrefs.SetInt("cash", Cash);
+        PlayerPrefs.SetFloat("highScore", HighScore);
+    }
+    public void LoadData2()
+    {
+        BeachSkin = PlayerPrefs.GetInt("Pink");
+        Skin3 = PlayerPrefs.GetInt("skin3");
+        Skin4 = PlayerPrefs.GetInt("skin4");
+        Skin5 = PlayerPrefs.GetInt("skin5");
+        Skin6 = PlayerPrefs.GetInt("skin6");
+        Skin7 = PlayerPrefs.GetInt("skin7");
+        Skin8 = PlayerPrefs.GetInt("skin8");
+        Skin9 = PlayerPrefs.GetInt("skin9");
+        Skin10 = PlayerPrefs.GetInt("skin10");
+        Skin11 = PlayerPrefs.GetInt("skin11");
+        Cash = PlayerPrefs.GetInt("cash");
+    }
+    public void LoadHighScore2()
+    {
+        HighScore = PlayerPrefs.GetFloat("highScore");
     }
     //public void LoatTimeData()
     //{
@@ -343,12 +375,12 @@ public class Player : MonoBehaviour
 
     //    SavedTimes.AddRange(data.timis);
     //}
-    public void LoadHighScore()
-    {
-        GameData data = SaveGame.LoadData();
+    //public void LoadHighScore1()
+    //{
+    //    GameData data = SaveGame.LoadData();
 
-        HighSacore = data.highScore;
-    }
+    //    HighSacore = data.highScore;
+    //}
     public void right ()
     {
         if (BeachSkin <= 10)
@@ -368,7 +400,7 @@ public class Player : MonoBehaviour
         if (Cash - 200 >= 0)
         {
             Cash -= 200;
-            Skin3 = true;
+            Skin3 = 1;
         }
         else
         {
@@ -380,7 +412,7 @@ public class Player : MonoBehaviour
         if (Cash - 200 >= 0)
         {
             Cash -= 200;
-            Skin4 = true;
+            Skin4 = 1;
         }
         else
         {
@@ -392,7 +424,7 @@ public class Player : MonoBehaviour
         if (Cash - 200 >= 0)
         {
             Cash -= 200;
-            Skin5 = true;
+            Skin5 = 1;
         }
         else
         {
@@ -404,7 +436,7 @@ public class Player : MonoBehaviour
         if (Cash - 200 >= 0)
         {
             Cash -= 200;
-            Skin6 = true;
+            Skin6 = 1;
         }
         else
         {
@@ -416,7 +448,7 @@ public class Player : MonoBehaviour
         if (Cash - 200 >= 0)
         {
             Cash -= 200;
-            Skin7 = true;
+            Skin7 = 1;
         }
         else
         {
@@ -428,7 +460,7 @@ public class Player : MonoBehaviour
         if (Cash - 200 >= 0)
         {
             Cash -= 200;
-            Skin8 = true;
+            Skin8 = 1;
         }
         else
         {
@@ -440,7 +472,7 @@ public class Player : MonoBehaviour
         if (Cash - 200 >= 0)
         {
             Cash -= 200;
-            Skin9 = true;
+            Skin9 = 1;
         }
         else
         {
@@ -452,7 +484,7 @@ public class Player : MonoBehaviour
         if (Cash - 200 >= 0)
         {
             Cash -= 200;
-            Skin10 = true;
+            Skin10 = 1;
         }
         else
         {
@@ -464,7 +496,7 @@ public class Player : MonoBehaviour
         if (Cash - 2000 >= 0)
         {
             Cash -= 2000;
-            Skin11 = true;
+            Skin11 = 1;
         }
         else
         {

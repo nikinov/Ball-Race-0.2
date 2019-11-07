@@ -25,6 +25,7 @@ TagManager:
   - LiteBlueAsphaltSkin
   - SimpleGamesSkin
   - Coin
+  - GameManager
   layers:
   - Default
   - TransparentFX

@@ -13,8 +13,8 @@ public class MainMenuHighScore : MonoBehaviour
 
     void Start()
     {
-        player.LoadHighScore();
-        HigScore = player.HighSacore;
+        player.LoadHighScore2();
+        HigScore = player.HighScore;
         HigScore = Mathf.Round(HigScore * 1);
         Sctext.text = HigScore.ToString("");
 

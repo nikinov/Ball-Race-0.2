@@ -3,20 +3,25 @@ using UnityEngine.UI;
 
 public class CollectingCoins : MonoBehaviour
 {
-    public Player player;
-
-    public GameObject PlayGuy;
+    Player player;
 
     public GameObject This;
 
     public int CoinsCollected;
 
-    public GameManager manager;
+    GameManager manager;
+
+    public AudioSource au;
 
     private void Start()
     {
         This.SetActive(true);
         CoinsCollected = 0;
+    }
+    private void Update()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        manager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
     }
     //void OnCollisionEnter(Collision collisionInfo)
     //{
@@ -31,5 +36,6 @@ public class CollectingCoins : MonoBehaviour
         This.SetActive(false);
         player.Add1Cash();
         manager.yeGot += 1;
+        au.Play();
     }
 }

@@ -23,7 +23,7 @@ public class score : MonoBehaviour
 
     private void Start()
     {
-        player.LoadHighScore();
+        player.LoadHighScore2();
         times = new List<float>();
         times.Add(1f);
     }
@@ -37,9 +37,9 @@ public class score : MonoBehaviour
 
         if (Deth == true)
         {
-            if (player.HighSacore < Score)
+            if (player.HighScore < Score)
             {
-                player.HighSacore = Score;
+                player.HighScore = Score;
             }
             scoreFinal.text = Score.ToString("");
             Timeing.text = timer.ToString("F2");

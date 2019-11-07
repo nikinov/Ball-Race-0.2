@@ -28,8 +28,6 @@ public class GameManager : MonoBehaviour
         DethPanel.SetActive(false);
         CompleteLevel.SetActive(false);
         pauseLevel.SetActive(false);
-        GamePanel.SetActive(true);
-        Speedo.SetActive(true);
         StartCoroutine(SetBlackFalse());
     }
 
