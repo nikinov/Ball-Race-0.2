@@ -348,8 +348,8 @@ public class Player : MonoBehaviour
         PlayerPrefs.SetInt("skin9", Skin9);
         PlayerPrefs.SetInt("skin10", Skin10);
         PlayerPrefs.SetInt("skin11", Skin11);
-        PlayerPrefs.SetInt("cash", Cash);
-        PlayerPrefs.SetFloat("highScore", HighScore);
+        PlayerPrefs.SetInt("cash", 0);
+        PlayerPrefs.SetFloat("highScore", 0);
     }
     public void LoadData2()
     {
