@@ -11,8 +11,6 @@ public class CollectingCoins : MonoBehaviour
 
     GameManager manager;
 
-    public AudioSource au;
-
     private void Start()
     {
         This.SetActive(true);
@@ -36,6 +34,5 @@ public class CollectingCoins : MonoBehaviour
         This.SetActive(false);
         player.Add1Cash();
         manager.yeGot += 1;
-        au.Play();
     }
 }
